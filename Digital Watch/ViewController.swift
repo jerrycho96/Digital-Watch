@@ -18,12 +18,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
                 `switch`.setOn(false, animated: true)
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     func startTime() {
@@ -39,9 +39,7 @@ class ViewController: UIViewController {
     
     @IBAction func startSwitch(_ sender: Any) {
         if `switch`.isOn == true {
-            //            myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-            
-            // closure 사용
+
             num = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {(num) in
                 self.startTime()
             })
